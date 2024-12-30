@@ -90,6 +90,47 @@ h2 {
 p {
     margin-bottom: 20px;
 }
+/* modal component style */
+    .modal-content {
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-content h2 {
+        margin-top: 0;
+    }
+
+    .modal-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .modal-content li {
+        margin-bottom: 10px;
+    }
+    .modal-content a {
+        text-decoration: none;
+        color: #23527c;
+    }
+
+    /* Styles to show/hide the modal */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba( 0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .modal.show {
+        display: block;
+    }
+/* footer component style */
 footer { 
     background-color: #333;
     color: #fff;

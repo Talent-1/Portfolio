@@ -1,5 +1,5 @@
 // Select the button element
-const = document.querySelector('button');
+const button = document.querySelector('button');
 
 // Add event listener to the button
 button.addEventListener('click', () => {
@@ -37,4 +37,16 @@ const modalTrigger = document.querySelector('.modal-trigger');
 const modal = document.querySelector('.modal');
 const closeButton = document.querySelector('.close');
 
-modalTrigger.addEventListener('click', () => )
+modalTrigger.addEventListener('click', () => {
+    modal.classList.add('show');
+});
+
+closeButton.addEventListener('click', () => {
+    modal.classList.remove('show');
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('show');
+    }
+});
