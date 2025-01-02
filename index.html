@@ -25,94 +25,121 @@
         <button class="dark-mode-toggle">Toggle Dark Mode</button>
     </header>
      <section class="hero" id="home">
-            <h1>Welcome to My Portfolio</h1>
-            <p>I'm Azikiwe Chibuzo Hillary, a passionate frontend developer and freelancer <br> with a love for creating innovative solutions </p>
-            <button>Explore My Portfolio</button>
+        <div class="container">
+            <h2>Hello, I'm Azikiwe Chibuzo.</h2>
+            <p>I'm a passionate frontend developer with a focus on creating user-friendly and visually applealing web experiences.</p>
+            <a href="#projects" class="btn">View My Work</a>
             <img src="background-image.jpg" alt="Background Image">
+            </div>
         </section>
         <main>
-            <section class="about" id="about" aria-hidden="true">
+            <section id="about">
+                <div class="container">
                 <h2> About Me</h2>
+                <div class="about-content">
                 <img src="/Photos/profile-picture.jpg" alt="Profile-Picture">
+                <div class="about-text">
                 <p>
-                    Hello! I'm Azikiwe Chibuzo Hillary, a passionate frontend developer and freelancer  <br> with 2+ years of experience in Website Development.
+                    I have a strong foundation in HTML, CSS, JavaScript and ReactJS,  with 2+ years of experience in Website Development. I'm always eager to learn new things and stay updated with the latest industry trends. 
                 </p>
                 <p>
-                    I specialize in creating and mantaining static and dynamic website <br> and i have a proven track record of delivering high-quality solution
+                I have a proven track record of delivering high-quality solution
                 </p>
                 <ul>
                     <li>Key Skills: Html, CSS, React JS... </li>
+                    <li>Tools: Git, GitHub</li>
                     <li>Certifications: Beginners level Frontend Developer, (TechyJaunt Academy)</li>
                 </ul>
-                <button>Learn More About My Services</button>
+                </div>
+                </div>
+                </div>
             </section>
-            <section class="portfolio" id="portfolio">
-                <h2> My Portfolio</h2>
-                <ul>
-                    <li>
+
+            <section id="projects">
+                <div class="container">
+                <h2> Projects</h2>
+                <div class="project-grid">
+                    <div class="project">
+                    <h3>Project 1: []</h3>
                         <img src="project1-image.jpg" alt="Project 1 Image">
-                        <h3>Project 1: []</h3>
                         <p>brief explanation of the project, including technologies used and achievements</p>
-                        <a href="">View on GitHub</a>
-                    </li>
-                    <li>
-                        <img src="project2-image.jpg" alt="Project 2 Image">
+                        <a href="project link" class="btn">View on GitHub</a>
+                        </div>
+                        <div class="project">
                         <h3>Project 2: []</h3>
+                        <img src="project2-image.jpg" alt="Project 2 Image">
                         <p>brief explanation of the project, including technologies used and achievements</p>
-                        <a href="">Live Demo</a>
-                    </li>
-                </ul>
+                        <a href="projectlink" class="btn">Live Demo</a>
+                    </div>
+                </div>
+                </div>
             </section>
-            <section class="services" id="services">
+
+            <section id="skills">
+                <div class="container">
+                    <h2>Skills</h2>
+                    <ul class="skills-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="services">
+                <div class="container">
                 <h2> My Services</h2>
-                <ul>
-                    <li>
+                <div class="service-grid">
+                    <div class="service">
                         <i class="icon-web-development"></i>
                         <h3>Web Development</h3>
-                        <p>brief explanation</p>
-                    </li>
-                    <li>
+                        <p>I build responsive and user-friendly websites using HTML, CSS and JavaScript</p>
+                    </div>
+                    <div class="service">
                         <i class="icon-mobile-app-development"></i>
                         <h3>Mobile App Development</h3>
                         <p>brief explanation</p>
-                    </li>
-                </ul>
-                <button>Learn More About My Services</button>
+                </div>
+                </div>
+                </div>
             </section>
-            <section class="testimonials" id="testimonials">
+
+            <section  id="testimonials">
+                <div class="container">
                 <h2>What My Clients Say</h2>
-                <ul>
-                    <li>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
                         <blockquote>
                             <p>"Azikiwe Chibuzo Hillary is an exceptional developer who consistently delivers high-quality work."</p>
                         </blockquote>
-                        <p> -Austin Chiegbu, <br> 
-                            CEO, <br>
-                            Global Electrical Associates.
-                        </p>
-                    </li>
-                    <li>
+                        <h3> -Austin Chiegbu,</h3>  
+                           <h6> CEO, </h6>
+                           <span> Global Electrical Associates.</span>
+                        </div>
+                    <div class="testimonial">
                         <blockquote>
                             <p> 
                                " I've had the pleasure of working with Azikiwe Chibuzo Hillary, on several projects, and I'm always impressed with their attention detail."
                             </p>
                         </blockquote>
-                        <p> -Ben Ugochukwu, <br>
-                        Director, <br>
-                    City Group of School, Ogidi. </p>
-                    </li>
-                </ul>
+                        <h3> -Ben Ugochukwu,</h3>
+                       <h6> Director, </h6>
+                    <span>City Group of School, Ogidi.</span>
+                    </div>
+                    </div>
+                </div>
             </section>
-            <section class="contact" id="contact">
+            <section id="contact">
+                <div class="container">
                 <h2> Get In Touch</h2>
-                <form action="">
+                <form>
                     <label for="name">Name:</label> <br>
-                    <input type="text" name="name" id="name"> <br>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required> <br>
                     <label for="email">Email:</label> <br>
-                    <input type="email" name="email" id="email"> <br>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required> <br>
                     <label for="message">Message:</label> <br>
-                    <textarea name="message" id="message" placeholder="type here..."></textarea> <br>
-                    <input type="submit" value="Send">
+                    <textarea name="message" id="message" placeholder="type here..." required></textarea> <br>
+                    <input type="submit" value="Send Message">
                 </form>
                 <p>Email: talecoded@gmail.com</p>
                 <p> Phone: +2348107346461</p>
@@ -124,26 +151,8 @@
                 <li><a href="#">Instagram</a></li>
                 <li><a href="#">TikTok</a></li>
             </ul>
+            </div>
             </section>
-    </main>
-     <!-- Modal-->
-     <button class="modal-trigger">
-        View Project Details
-     </button>
-
-     <div class="modal">
-        <div class="modal-content">
-            <h2>E-payment site</h2>
-            <p>A website to enable students pay their fees electronically</p>
-            <ul>
-                <li><strong>Technologies Used:</strong>HTML, CSS, JavaScript, React</li>
-                <li><strong>Features:</strong>Responsive Design, Interactive Elements, API Integration</li>
-                <li><strong>GitHub Repository:</strong><a href="#">Link to GitHub Repo</a></li>
-                <li><strong>Live Demo:</strong><a href="#">Link to Live Demo</a></li>
-            </ul>
-            <button class="close">Close</button>
-        </div>
-     </div>
     <footer>
         <p>&copy; 2024 Talent Tech Hub. All rights reserved</p>
         <ul>
