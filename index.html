@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +8,9 @@
 </head>
 <body>
     <header>
+        <div class="container">
+            <button id="toggle-btn">&#9776</button>
+
         <nav>
             <ul>
                 <li> <a href="#home">Home</a></li>
@@ -37,7 +39,7 @@
                 <div class="container">
                 <h2> About Me</h2>
                 <div class="about-content">
-                <img src="/Photos/profile-picture.jpg" alt="Profile-Picture">
+                <img src="/Photos/profile-picture.jpg" alt="Profile-Picture" loading="lazy">
                 <div class="about-text">
                 <p>
                     I have a strong foundation in HTML, CSS, JavaScript and ReactJS,  with 2+ years of experience in Website Development. I'm always eager to learn new things and stay updated with the latest industry trends. 
@@ -119,7 +121,7 @@
                     <div class="testimonial">
                         <blockquote>
                             <p> 
-                               " I've had the pleasure of working with Azikiwe Chibuzo Hillary, on several projects, and I'm always impressed with their attention detail."
+                               " I've had the pleasure of working with Azikiwe Chibuzo Hillary, on several projects, and  I'm always impressed with their attention detail."
                             </p>
                         </blockquote>
                         <h3> -Ben Ugochukwu,</h3>
@@ -154,13 +156,14 @@
             </div>
             </section>
     <footer>
+        <div class="container">
         <p>&copy; 2024 Talent Tech Hub. All rights reserved</p>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-                <li><a href="http://www.linkedin.com/in/azikiwe-chibuzo-9857a1262">LinkedIn</a></li>
+        <ul class="social-media">
+            <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebool-f"></i></a></li>
+                <li><a href="http://www.linkedin.com/in/azikiwe-chibuzo-9857a1262" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
                 <li><a href="https://twitter.com/azikiwe_chibuzo">X</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">TikTok</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">TikTok</a></li>
                  
                 <li><a href="mailto:talecoded@gmail.com">Contact</a></li>
         </ul>
@@ -176,8 +179,17 @@
         <p>Disclaimer: We strive to Provide accurate and helpful information on our website. <br> However, we make no guarantees regarding the accuracy, completeness or reliability of the content.</p>
         <p> By using our website, you acknowledge that you understand and agree to thes <a href="#">terms</a>. <br> if you have any questions or concerns, please don't hestitate to contact us.</p>
         <button class="scroll-to-top">Top</button>
+        </div>
     </footer>
-    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Modal Header</h2>
+            <p>some text in the modal.</p>
+            
+        </div>
+    </div>
+    <button id="showModal">Open Modal</button>
      <script src="script.js"></script>
 </body>
 </html>

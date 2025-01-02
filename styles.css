@@ -1,29 +1,248 @@
-/* global styles */
-* {
-    box-sizing: border-box;
+/* General Style */
+body {
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
-/*Body style */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color:#333;
-    background-color: #f9f9f9;
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
 }
+/* Header Style */
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}       
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    display: none;/*Initially Hidden */
+}
+nav ul.active{
+    display: block;
+}
+nav li {
+    margin-right: 2rem;
+}
+
 
 a {
     text-decoration: none;
-    color: #337ab7;
+    color: #fff;
 }
 
 a:hover {
     color: #23527c;
 }
+/* Hero Section Styles */
+.hero {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+}
+.hero h2 {
+    font-size: 2.5rem;
+}
+.btn{
+    background-color: #fff;
+    color: #333;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+/* About Section Styles */
+.about-content {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.about-content img {
+    width: 200px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+/* Project Section Styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+}
+.project{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Skills Section Styles */
+.skills-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills-list li {
+    margin: 0 1rem 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #eee;
+    border-radius: 3px;
+}
+/* Testimonial Section Styles*/
+.testimonial-slider {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.testimonial {
+    display:none;
+    margin-right: 2rem;
+    padding: 1rem;
+    background-color: 1fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.testimonial.active{
+    display: block;
+}
+/* Contact Section Style */
+form{
+    max-width: 400px;
+}
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/*Modal Section Styles*/
+.modal{
+    display: none;/*Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1;/* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;/*Full width */
+    height: 100%; /* Full height */
+    overflow: auto;/* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Fallback colo */
+    background-color: rgba(0, 0, 0, 0.4);/*Black w/ opacity */
+}
+.modal-content{
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;/* could be more or less depending on the screen size */
+}
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus  {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Navbar TOggle */
+#toggle-btn {
+    display: none;/*Hide on Larger Screens */
+}
 
+
+/*Media Queries (for responsiveness) */
+@media (max-width:768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .about-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-grid, .service-grid{
+        grid-template-columns: 1fr;
+    }
+    #toggle-btn{
+        display: block;
+    }
+    nav ul {
+        position: static;
+        flex-direction: row;
+    }
+}
+/*Footer Section Styles */
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+.social-media{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.social-media li {
+    margin: 0 1rem;
+}
+.social-media a {
+    color: #fff;
+    font-size: 1.2rem;
+}
+footer nav li {
+    margin: 0 1rem;
+}
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.scroll-to-top {
+    background-color: #fff;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+/* Toggle btn styles */
+#toggle-btn{
+     /*Hide on larger screen */
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+}
+/*
 img {
     max-width: 100%;
     height: auto;
@@ -66,8 +285,9 @@ header nav a {
 }
 header nav a:hover {
     color: #ccc;
-}
+}*/
 /*Main component Styles */
+/*
 main {
     display: flex;
     flex-direction: column;
@@ -89,9 +309,10 @@ h2 {
 
 p {
     margin-bottom: 20px;
-}
+}*/
+
 /* modal component style */
-    .modal-content {
+/*    .modal-content {
         padding: 20px;
         background-color: #fff;
         border: 1px solid #ddd;
@@ -115,9 +336,9 @@ p {
         text-decoration: none;
         color: #23527c;
     }
-
+*/
     /* Styles to show/hide the modal */
-    .modal {
+  /*  .modal {
         display: none;
         position: fixed;
         top: 0;
@@ -129,8 +350,9 @@ p {
     }
     .modal.show {
         display: block;
-    }
+    }*/
 /* footer component style */
+/*
 footer { 
     background-color: #333;
     color: #fff;
@@ -161,9 +383,9 @@ footer a {
 footer a:hover {
     color: #ccc;
 }
-
+*/
 /* Mobile responsive design */
-
+/*
 @media only screen and (max-width: 768px){
     main {
         flex-direction: column;
@@ -183,4 +405,4 @@ footer a:hover {
     footer {
         padding: 5px;
     }
-}
+}*/
