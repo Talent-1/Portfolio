@@ -1,0 +1,80 @@
+.sign-up-page {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+nav.navbar {
+  display: flex;
+  flex-direction: row; /* Horizontal alignment */
+  gap: 2rem; /* Gap between items */
+  align-items: center; /* Optional: Vertical alignment */
+  justify-content: space-between; /* Optional: Distribute evenly */
+}
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+form { border: 15px 10px transparent;
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 30px auto;
+  padding-bottom: 2em;
+}
+fieldset {
+  display: block;
+  border: none;
+  padding: 2rem 60px;
+  border-bottom: 3px solid #3b3b4f;
+}
+fieldset:last-of-type {
+  border-bottom: none;
+}
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+input
+{ background-color: #ffffff;
+  border: 1px solid #0a0a23;
+  color: #000000;
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  display: block;
+}
+.inline { border-radius: 3px;
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+.terms-and-conditions{
+	padding:2rem 100;
+}
+input[type="submit"] {
+  display: block;
+  width: 30%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+  border-radius: 10px;
+}
+header , footer{
+    background-color: #fecdaa;
+}
+footer{
+    max-height: 200px;
+    font-weight: 100;
+    font-family: cursive;
+    text-align: center;
+    display: block;
+    padding:0;
+    width: 100%;
+}

@@ -65,7 +65,7 @@ let currentTestimonial = 0;
 
 function nextTestinonial() {
     testimonials[currentTestimonial].classList.remove('active');
-    currentTestimonial = (currentTestimonial + 1)/ testimonials.length;
+    currentTestimonial = (currentTestimonial + 1)% testimonials.length;
     testimonials[currentTestimonial].classList.add('active');
 }
 
@@ -85,7 +85,7 @@ contactForm.addEventListener('submit', (event) => {
         alert(`Thank you, ${name}! Your message has been sent.` );
         //message for form data sending to server
 
-        //
+        //.... 
         contactForm.reset();//clear the form field
     } else {
         alert(`Please fill out all fields.`);
@@ -109,10 +109,10 @@ scrollToTopBtn.addEventListener('click', () => {
 
 //Modal
 const modal = document.getElementById('myModal');
-const btn = document.getElementById(showModal);
+const btn = document.getElementById('showModal');
 const span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function () {
+btn.onclick = function() {
     modal.style.display = 'block';
 }
 span.onclick = function() {

@@ -1,0 +1,303 @@
+/*body{
+    background: linear-gradient(45deg, #48416b, #cececc);
+}
+h1{
+    text-align: center;
+    font-size: 3em;
+    color:#ecb3ff;
+    padding-left: 30px;
+}
+h2{
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    margin-left: 20px;
+    border: 1px solid transparent;
+}
+hr{
+    width: 200px;
+}
+blockquote{
+    justify-self: center;
+    text-align: center;
+   position: sticky;
+   font-style: italic;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: medium;
+   color: #ffffff;
+   justify-content: space-around;
+   letter-spacing: inherit;
+}
+blockquote::before{
+    content: '" ';
+}
+blockquote::after{
+    content: ' "';
+}
+.text{ box-sizing: border-box;
+    justify-content: center;
+    height: inherit;
+    padding: 4px;
+    margin-left: 20px;
+    text-align: center;
+    width: 80%;
+    margin: 10px 0;
+    border: 2px solid silver;
+    box-shadow: 10px 10px 5px #c0c0c0;
+    border-radius: 8px;
+}
+#txt-2-link, #txt-3-link-1, #txt-3-link-2{
+    color: #ffffff;
+    font-size: large;
+    text-justify: unset;
+    border: 0;
+}
+#txt-3-link-2{
+  right: 0;
+    position: relative;
+}
+.text > p{
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-justify: inherit;
+    padding: 2px;
+    margin: auto;
+}
+
+#author{
+    text-align: center;
+    font-style: italic;
+}
+.header , .footer{
+    background-color: #fecdaa;
+    border-radius: 10px;
+}
+.footer{
+    max-height: 200px;
+    font-weight: 100;
+    font-family: cursive;
+    text-align: center;
+    display: block;
+    padding:0;
+    width: 100%;
+}
+
+.logo{
+    font-size: 1.3em;
+    padding: 8px;
+}
+.navbar{
+    list-style-type: none;
+    margin: 0%;
+    padding: 20px;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.navItem{
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+.toggle{
+    font-size: 1.8em;
+    padding: 10px;
+    order: 1;
+}
+.active .navItem{
+    display: block;
+}
+.navItem a{
+    display: block;
+    padding: 10px 5px;
+}
+.navItem a:hover{
+    background-color: black;
+    color: white;
+}
+@media all and (min-width:960px) {
+    .footer{
+        background-color: gainsboro;
+    }
+    .navItem{
+        position: relative;
+        display: block;
+        width: auto;
+    }
+    .navbar{
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+    .toggle{
+        display: none;
+        flex: 1;
+        text-align: right;
+    }
+    .logo{
+flex: 1;
+    }
+}
+
+.fa {
+    padding:0;
+    font-size: 80px;
+    width: 50px;
+    text-align: left;
+    text-decoration: none;
+    }
+
+
+    .fa:hover {
+    opacity: 0.7;
+    }
+*/
+    body {
+        background: linear-gradient(45deg, #48416b, #cececc);
+      }
+      
+      /* Header and Footer */
+      .header,
+      .footer {
+        background-color: #fecdaa;
+        border-radius: 10px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .footer {
+        max-height: 200px;
+        font-weight: 100;
+        font-family: cursive;
+        text-align: center;
+      }
+      
+      /* Logo */
+      .logo {
+        font-size: 1.3em;
+        padding: 8px;
+      }
+      
+      /* Navigation Bar */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .navbar-items {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap if space is limited */
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-item{
+        list-style-type: none;
+      }
+      .nav-item.logo{
+        list-style-type: none;
+      }
+      .nav-item {
+        padding: 10px 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+      
+      .nav-link {
+        color: white;
+        text-decoration: none;
+      }
+      
+      .nav-link:hover {
+        background-color: #3b3b4f; /* Lighter shade on hover */
+        transition: background-color 0.3s ease; /* Smoother hover transition */
+        color: #00f;
+      }
+      
+      /* Toggle Button */
+      .nav-toggle {
+        display: none; /* Hide on large screens */
+        font-size: 1.8em;
+        padding: 10px;
+        color: white;
+      }
+      
+      /* Responsive Design (Media Queries) */
+      @media (max-width: 768px) {
+        .navbar-items {
+          flex-direction: column; /* Stack items vertically on small screens */
+          align-items: center; /* Center items vertically */
+          position: absolute;
+          top: 100%; /* Position off-screen initially */
+          left: 0; /* Align left */
+          width: 100%; /* Full width of screen */
+          background-color: #fecdaa; /* Match header background */
+          transition: transform 0.3s ease; /* Smoother open/close animation */
+          transform: translateX(100%); /* Hide off-screen to the right */
+        }
+      
+        .navbar-items.active {
+          transform: translateX(0); /* Slide in from the right */
+        }
+      
+        .nav-toggle {
+          display: block; /* Show on small screens */
+        }
+     
+      h1 {
+        text-align: center;
+        font-size: 3em;
+        color: #ecb3ff;
+        padding-left: 30px;
+      }
+      
+      h2 {
+        text-align: center;
+        font-size: 25px;
+        color: rgb(red, green, blue);
+        margin-left: 20px;
+      }
+      
+      hr {
+        width: 200px;
+      }
+      
+      blockquote {
+        font-style: italic;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: medium;
+        color: #ffffff;
+        justify-content: space-around;
+        letter-spacing: inherit;
+      }
+      
+      blockquote::before {
+        content: '" ';
+      }
+      
+      blockquote::after {
+        content: ' "';
+      }
+      
+      .text { /* These styles remain for the main content sections */
+        box-sizing: border-box;
+        padding: 4px;
+        margin-left: 20px;
+        text-align: center;
+        width: 80%;
+        margin: 10px 0;
+        border: 2px solid silver;
+        box-shadow: 10px 10px 5px #c0c;
+      }
+      
+      
